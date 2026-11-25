@@ -55,6 +55,7 @@ def main() -> None:
         "entry.txt differs from expected message: "
         f"got {len(data)} bytes, expected {len(EXPECTED_BYTES)} bytes"
     )
+    assert b"\n" not in data, "entry.txt must hold one line, no newline inside"
 
 
 if __name__ == "__main__":
